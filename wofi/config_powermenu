@@ -1,6 +1,6 @@
-width=450
-height=250
-location=center
+width=250
+height=200
+location=bottom_left
 show=drun
 prompt=Search...
 filter_rate=100
@@ -13,3 +13,4 @@ insensitive=true
 allow_images=true
 image_size=40
 gtk_dark=true
+hide_search=true

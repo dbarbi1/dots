@@ -1,6 +1,6 @@
 {
     "layer": "top",    
-    "position": "left",
+    "position": "top",
     "mode": "dock",
     "height": 1400,
     "width": 64,
@@ -10,7 +10,7 @@
         "wlr/workspaces"
     ],
     "modules-center":[
-        "wlr/taskbar"
+        "hyprland/window"
     ], 
     "modules-right": [
         "tray",
@@ -18,13 +18,10 @@
         "memory",
         "pulseaudio",
         "clock",
-        "custom/dnd",
         "custom/power"
     ],
     "custom/launcher":  {
         "format": "",
-        "on-click": " pkill wofi || gamemoderun wofi -S drun -I -m -n",
-        "on-click-right": "killall wofi",
         "tooltip": false
     },
     "wlr/workspaces": {
@@ -40,18 +37,6 @@
             "4": "",
             "default": ""
           }
-    },
-    "wlr/taskbar": {
-        "all-outputs": true,
-        "active-first": false,
-        "format": "{icon}",
-        "icon-size": 24,
-        "icon-theme": "skeuowaita",
-        "tooltip": true,
-        "tooltip-format": "{title}",
-        "on-click": "activate",
-        "on-click-middle": "close",
-        "on-click-right": "minimize-raise",
     },
     "hyprland/window": {
         "format": "{}",
@@ -94,20 +79,9 @@
             "default": ["", "", ""]
         }
     },
-
-    "custom/dnd": {
-        //"exec": "~/.config/waybar/scripts/dunst.sh",
-        //"on-click": "dunstctl set-paused toggle",
-        "format": "",
-        "on-click": "~/.config/waybar/scripts/dunst.sh",
-        "restart-interval": 1,
-        "tooltip": false,
-    },
-
     "custom/power": {
         "format": "",
-        "on-click": "gamemoderun ~/.config/waybar/scripts/powermenu.sh &",
-        "on-click-right": "killall wofi",
+        "on-click": "wlogout -b 2",
         "tooltip": false
     }
 }
